@@ -1,8 +1,23 @@
+
 # AI Risk Manager
 
 > **A defense-only, explainable AI risk management system for e-commerce return abuse and friendly return fraud prevention.**
 
-[![Automated Tests](https://img.shields.io/badge/pytest-47%20passed-brightgreen.svg)]()
+[![Automated Tests](https://img.shields.io/badge/pytest-53%20passed-brightgreen.svg)]()
+[![Model Version](https://img.shields.io/badge/champion%20model-return--risk--hgb--v1-blue.svg)]()
+[![Precision @ Opt Threshold](https://img.shields.io/badge/held--out%20precision-75.00%25-informational.svg)]()
+[![Recall @ Opt Threshold](https://img.shields.io/badge/held--out%20recall-85.07%25-informational.svg)]()
+[![PR--AUC](https://img.shields.io/badge/held--out%20PR--AUC-0.7983-informational.svg)]()
+[![Audit Log](https://img.shields.io/badge/audit%20ledger-SHA--256%20chained-success.svg)]()
+
+## 🚀 Live Demo
+
+- **Frontend:** https://ai-risk-manager-frontend-2ckd.onrender.com
+- **Backend API:** https://ai-risk-manager-rzhv.onrender.com
+- **API Documentation:** https://ai-risk-manager-rzhv.onrender.com/docs
+- **Health Check:** https://ai-risk-manager-rzhv.onrender.com/health
+
+> **Demo Notice:** This deployment uses synthetic simulation data for demonstration and evaluation. Economic benefit figures are not production savings.[![Automated Tests](https://img.shields.io/badge/pytest-47%20passed-brightgreen.svg)]()
 [![Model Version](https://img.shields.io/badge/champion%20model-return--risk--hgb--v1-blue.svg)]()
 [![Precision @ Opt Threshold](https://img.shields.io/badge/held--out%20precision-75.00%25-informational.svg)]()
 [![Recall @ Opt Threshold](https://img.shields.io/badge/held--out%20recall-85.07%25-informational.svg)]()
@@ -146,3 +161,74 @@ npm --prefix frontend run dev
 ## 7. License & Governance
 
 Built for the AI Risk Manager track. Strictly defense-only.
+## 🛡️ Risk Governance
+
+- Defense-only risk management
+- No autonomous financial execution
+- Bounded policy thresholds
+- Human review for governed decisions
+- Explainable risk factors
+- Tamper-evident audit trail
+- Audit-chain integrity verification
+- PII minimization
+- Separate validation and held-out test evaluation
+- Baseline model preserved for auditability
+## 🧰 Technology Stack
+
+### Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+### Backend
+- Python
+- FastAPI
+- SQLAlchemy
+- PostgreSQL
+- Pydantic
+
+### Machine Learning
+- scikit-learn
+- Pandas
+- NumPy
+- Joblib
+
+### Deployment
+- Render Static Site
+- Render Web Service
+- Render PostgreSQL
+## 💻 Local Development
+
+### Backend
+
+```powershell
+cd "AI Risk Manager"
+
+.\.venv\Scripts\Activate.ps1
+
+$env:PYTHONPATH = (Get-Location).Path
+
+.\.venv\Scripts\python.exe -m uvicorn backend.app.main:app --reload --port 8000
+## ☁️ Production Deployment
+
+The production demo is deployed using Render:
+
+| Component | Platform |
+|---|---|
+| Frontend | Render Static Site |
+| Backend | Render Web Service |
+| Database | Render PostgreSQL |
+
+### Production URLs
+
+- **Frontend:** https://ai-risk-manager-frontend-2ckd.onrender.com
+- **Backend:** https://ai-risk-manager-rzhv.onrender.com
+- **Swagger API:** https://ai-risk-manager-rzhv.onrender.com/docs
+- **Health:** https://ai-risk-manager-rzhv.onrender.com/health
+
+The frontend communicates with the backend through:
+
+`VITE_API_BASE_URL`
+
+Production secrets and database credentials are stored in Render environment variables and are not committed to Git.
