@@ -1,0 +1,111 @@
+{
+  "disclaimer": "SYNTHETIC SIMULATION \u2014 NOT PRODUCTION SAVINGS",
+  "model_version": "return-risk-hgb-v1",
+  "operating_threshold": 0.3,
+  "validation": {
+    "sample_count": 750,
+    "positive_count": 90,
+    "prevalence": 0.12,
+    "metrics": {
+      "operating_threshold": 0.3,
+      "sample_count": 750,
+      "positive_count": 90,
+      "prevalence": 0.12,
+      "precision": 0.5929,
+      "recall": 0.7444,
+      "f1_score": 0.6601,
+      "roc_auc": 0.8429,
+      "pr_auc": 0.6144,
+      "brier_score": 0.0623,
+      "false_positive_rate": 0.0697,
+      "false_negative_rate": 0.2556,
+      "confusion_matrix": {
+        "true_negatives": 614,
+        "false_positives": 46,
+        "false_negatives": 23,
+        "true_positives": 67
+      }
+    },
+    "costs": {
+      "disclaimer": "SYNTHETIC SIMULATION \u2014 NOT PRODUCTION SAVINGS",
+      "operating_threshold": 0.3,
+      "currency_symbol": "\u20b9",
+      "tp_count": 67,
+      "fp_count": 46,
+      "fn_count": 23,
+      "tn_count": 614,
+      "review_count": 113,
+      "usd": {
+        "baseline_unmitigated_loss": 50502.64,
+        "gross_loss_prevented": 46412.65,
+        "false_positive_friction_cost": 2300.0,
+        "false_negative_realized_loss": 3520.49,
+        "review_labor_expenditure": 1005.0,
+        "total_estimated_cost": 6825.49,
+        "net_merchant_benefit": 43677.15
+      },
+      "inr": {
+        "baseline_unmitigated_loss": 4191719.12,
+        "gross_loss_prevented": 3852249.95,
+        "false_positive_friction_cost": 190900.0,
+        "false_negative_realized_loss": 292200.67,
+        "review_labor_expenditure": 83415.0,
+        "total_estimated_cost": 566515.67,
+        "net_merchant_benefit": 3625203.45
+      }
+    }
+  },
+  "held_out_test": {
+    "sample_count": 750,
+    "positive_count": 134,
+    "prevalence": 0.1787,
+    "metrics": {
+      "operating_threshold": 0.3,
+      "sample_count": 750,
+      "positive_count": 134,
+      "prevalence": 0.17866666666666667,
+      "precision": 0.75,
+      "recall": 0.8507,
+      "f1_score": 0.7972,
+      "roc_auc": 0.9242,
+      "pr_auc": 0.7983,
+      "brier_score": 0.0671,
+      "false_positive_rate": 0.0617,
+      "false_negative_rate": 0.1493,
+      "confusion_matrix": {
+        "true_negatives": 578,
+        "false_positives": 38,
+        "false_negatives": 20,
+        "true_positives": 114
+      }
+    },
+    "costs": {
+      "disclaimer": "SYNTHETIC SIMULATION \u2014 NOT PRODUCTION SAVINGS",
+      "operating_threshold": 0.3,
+      "currency_symbol": "\u20b9",
+      "tp_count": 114,
+      "fp_count": 38,
+      "fn_count": 20,
+      "tn_count": 578,
+      "review_count": 152,
+      "usd": {
+        "baseline_unmitigated_loss": 77659.82,
+        "gross_loss_prevented": 72369.28,
+        "false_positive_friction_cost": 1900.0,
+        "false_negative_realized_loss": 4321.54,
+        "review_labor_expenditure": 1710.0,
+        "total_estimated_cost": 7931.54,
+        "net_merchant_benefit": 69728.28
+      },
+      "inr": {
+        "baseline_unmitigated_loss": 6445765.06,
+        "gross_loss_prevented": 6006650.24,
+        "false_positive_friction_cost": 157700.0,
+        "false_negative_realized_loss": 358687.82,
+        "review_labor_expenditure": 141930.0,
+        "total_estimated_cost": 658317.82,
+        "net_merchant_benefit": 5787447.24
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "split_summary": {
+    "train": {
+      "count": 3500,
+      "target_count": 442,
+      "prevalence": 0.12628571428571428
+    },
+    "val": {
+      "count": 750,
+      "target_count": 118,
+      "prevalence": 0.15733333333333333
+    },
+    "held_out_test": {
+      "count": 750,
+      "target_count": 122,
+      "prevalence": 0.16266666666666665
+    }
+  },
+  "training_metadata": {
+    "model_version": "v1_baseline_logistic_regression",
+    "trained_at": "2026-08-23T10:11:37.047945",
+    "sample_count": 3500,
+    "target_prevalence": 0.12628571428571428,
+    "num_features_in": 19,
+    "num_features_out": 33
+  },
+  "statistical_metrics": {
+    "operating_threshold": 0.5,
+    "sample_count": 750,
+    "positive_count": 122,
+    "prevalence": 0.16266666666666665,
+    "precision": 0.6136,
+    "recall": 0.8852,
+    "f1_score": 0.7248,
+    "roc_auc": 0.9097,
+    "pr_auc": 0.7472,
+    "brier_score": 0.1147,
+    "false_positive_rate": 0.1083,
+    "false_negative_rate": 0.1148,
+    "confusion_matrix": {
+      "true_negatives": 560,
+      "false_positives": 68,
+      "false_negatives": 14,
+      "true_positives": 108
+    }
+  },
+  "business_cost_matrix": {
+    "operating_threshold": 0.5,
+    "baseline_unmitigated_loss_usd": 86429.06,
+    "gross_loss_prevented_usd": 82145.34,
+    "false_positive_friction_cost_usd": 3400.0,
+    "false_negative_realized_loss_usd": 3365.72,
+    "review_labor_expenditure_usd": 1620.0,
+    "net_merchant_benefit_usd": 78043.34,
+    "tp_count": 108,
+    "fp_count": 68,
+    "fn_count": 14,
+    "tn_count": 560
+  }
+}

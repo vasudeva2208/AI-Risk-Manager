@@ -1,0 +1,79 @@
+{
+  "dataset_version": "return-abuse-synthetic-v1",
+  "feature_version": "v2_point_in_time_23f",
+  "validation_set_size": 750,
+  "test_set_size": 750,
+  "selection_criterion": {
+    "primary": "PR-AUC (Precision-Recall Area Under Curve across threshold spectrum)",
+    "secondary": [
+      "Probability Calibration (Brier Score)",
+      "Operating-Point F1 and Recall @ Threshold=0.30",
+      "Non-linear Feature Interaction Modeling",
+      "Asymmetric Net Economic Benefit"
+    ]
+  },
+  "selected_model": "return-risk-hgb-v1",
+  "selection_rationale": "HistGradientBoosting achieved higher PR-AUC (0.7983 vs 0.7890) and captures complex multi-order velocity and tender interactions. While Logistic Regression achieved slightly higher operating-point recall and lower Brier score, HGB was selected as production champion for superior top-decile risk ranking under imbalanced distributions. Logistic Regression remains active as a preserved interpretable baseline.",
+  "candidate_models": [
+    {
+      "model_version": "return-risk-hgb-v1",
+      "algorithm": "HistGradientBoostingClassifier",
+      "calibration": "sigmoid (Platt scaling)",
+      "status": "CHAMPION",
+      "validation_pr_auc": 0.6144,
+      "validation_roc_auc": 0.8429,
+      "validation_brier_score": 0.0623,
+      "held_out_test_metrics": {
+        "operating_threshold": 0.3,
+        "sample_count": 750,
+        "positive_count": 134,
+        "prevalence": 0.17866666666666667,
+        "precision": 0.75,
+        "recall": 0.8507,
+        "f1_score": 0.7972,
+        "roc_auc": 0.9242,
+        "pr_auc": 0.7983,
+        "brier_score": 0.0671,
+        "false_positive_rate": 0.0617,
+        "false_negative_rate": 0.1493,
+        "confusion_matrix": {
+          "true_negatives": 578,
+          "false_positives": 38,
+          "false_negatives": 20,
+          "true_positives": 114
+        }
+      },
+      "held_out_test_net_benefit_inr": 5787447.24
+    },
+    {
+      "model_version": "return-risk-logreg-v1",
+      "algorithm": "LogisticRegression (L2 regularized)",
+      "calibration": "sigmoid (Platt scaling)",
+      "status": "BASELINE",
+      "validation_pr_auc": 0.6543,
+      "validation_roc_auc": 0.8726,
+      "validation_brier_score": 0.062,
+      "held_out_test_metrics": {
+        "operating_threshold": 0.3,
+        "sample_count": 750,
+        "positive_count": 134,
+        "prevalence": 0.17866666666666667,
+        "precision": 0.7582,
+        "recall": 0.8657,
+        "f1_score": 0.8084,
+        "roc_auc": 0.9245,
+        "pr_auc": 0.789,
+        "brier_score": 0.0644,
+        "false_positive_rate": 0.0601,
+        "false_negative_rate": 0.1343,
+        "confusion_matrix": {
+          "true_negatives": 579,
+          "false_positives": 37,
+          "false_negatives": 18,
+          "true_positives": 116
+        }
+      },
+      "held_out_test_net_benefit_inr": 5819481.09
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "disclaimer": "SYNTHETIC SIMULATION \u2014 VALIDATION DATA ONLY",
+  "description": "Validation-set optimal operating threshold and economic benefit across various merchant customer-friction cost scenarios.",
+  "scenarios": [
+    {
+      "fp_cost_inr": 1000.0,
+      "fp_cost_usd": 12.05,
+      "optimal_validation_threshold": 0.2,
+      "validation_precision": 0.5965,
+      "validation_recall": 0.7556,
+      "validation_f1": 0.6667,
+      "validation_review_count": 114,
+      "validation_fp_count": 46,
+      "validation_fn_count": 22,
+      "validation_net_economic_benefit_inr": 3769887.39,
+      "validation_net_economic_benefit_usd": 45420.33
+    },
+    {
+      "fp_cost_inr": 2000.0,
+      "fp_cost_usd": 24.1,
+      "optimal_validation_threshold": 0.2,
+      "validation_precision": 0.5965,
+      "validation_recall": 0.7556,
+      "validation_f1": 0.6667,
+      "validation_review_count": 114,
+      "validation_fp_count": 46,
+      "validation_fn_count": 22,
+      "validation_net_economic_benefit_inr": 3735157.39,
+      "validation_net_economic_benefit_usd": 45001.9
+    },
+    {
+      "fp_cost_inr": 3000.0,
+      "fp_cost_usd": 36.14,
+      "optimal_validation_threshold": 0.2,
+      "validation_precision": 0.5965,
+      "validation_recall": 0.7556,
+      "validation_f1": 0.6667,
+      "validation_review_count": 114,
+      "validation_fp_count": 46,
+      "validation_fn_count": 22,
+      "validation_net_economic_benefit_inr": 3689157.39,
+      "validation_net_economic_benefit_usd": 44447.68
+    },
+    {
+      "fp_cost_inr": 4150.0,
+      "fp_cost_usd": 50.0,
+      "optimal_validation_threshold": 0.2,
+      "validation_precision": 0.5965,
+      "validation_recall": 0.7556,
+      "validation_f1": 0.6667,
+      "validation_review_count": 114,
+      "validation_fp_count": 46,
+      "validation_fn_count": 22,
+      "validation_net_economic_benefit_inr": 3636257.39,
+      "validation_net_economic_benefit_usd": 43810.33
+    },
+    {
+      "fp_cost_inr": 5000.0,
+      "fp_cost_usd": 60.24,
+      "optimal_validation_threshold": 0.2,
+      "validation_precision": 0.5965,
+      "validation_recall": 0.7556,
+      "validation_f1": 0.6667,
+      "validation_review_count": 114,
+      "validation_fp_count": 46,
+      "validation_fn_count": 22,
+      "validation_net_economic_benefit_inr": 3597157.39,
+      "validation_net_economic_benefit_usd": 43339.25
+    },
+    {
+      "fp_cost_inr": 7500.0,
+      "fp_cost_usd": 90.36,
+      "optimal_validation_threshold": 0.2,
+      "validation_precision": 0.5965,
+      "validation_recall": 0.7556,
+      "validation_f1": 0.6667,
+      "validation_review_count": 114,
+      "validation_fp_count": 46,
+      "validation_fn_count": 22,
+      "validation_net_economic_benefit_inr": 3482157.39,
+      "validation_net_economic_benefit_usd": 41953.7
+    },
+    {
+      "fp_cost_inr": 10000.0,
+      "fp_cost_usd": 120.48,
+      "optimal_validation_threshold": 0.2,
+      "validation_precision": 0.5965,
+      "validation_recall": 0.7556,
+      "validation_f1": 0.6667,
+      "validation_review_count": 114,
+      "validation_fp_count": 46,
+      "validation_fn_count": 22,
+      "validation_net_economic_benefit_inr": 3367157.39,
+      "validation_net_economic_benefit_usd": 40568.16
+    }
+  ]
+}

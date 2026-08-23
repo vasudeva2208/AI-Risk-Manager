@@ -1,0 +1,47 @@
+{
+  "precision": {
+    "metric": "precision",
+    "estimate": 0.7512,
+    "lower_95": 0.6807,
+    "upper_95": 0.8153,
+    "std_error": 0.0353,
+    "n_bootstraps": 1000,
+    "method": "non_parametric_bootstrap_percentile"
+  },
+  "recall": {
+    "metric": "recall",
+    "estimate": 0.851,
+    "lower_95": 0.7876,
+    "upper_95": 0.9077,
+    "std_error": 0.0304,
+    "n_bootstraps": 1000,
+    "method": "non_parametric_bootstrap_percentile"
+  },
+  "f1_score": {
+    "metric": "f1_score",
+    "estimate": 0.7974,
+    "lower_95": 0.7448,
+    "upper_95": 0.8457,
+    "std_error": 0.0259,
+    "n_bootstraps": 1000,
+    "method": "non_parametric_bootstrap_percentile"
+  },
+  "pr_auc": {
+    "metric": "pr_auc",
+    "estimate": 0.7969,
+    "lower_95": 0.7156,
+    "upper_95": 0.8637,
+    "std_error": 0.0373,
+    "n_bootstraps": 1000,
+    "method": "non_parametric_bootstrap_percentile"
+  },
+  "roc_auc": {
+    "metric": "roc_auc",
+    "estimate": 0.9248,
+    "lower_95": 0.8918,
+    "upper_95": 0.9542,
+    "std_error": 0.0157,
+    "n_bootstraps": 1000,
+    "method": "non_parametric_bootstrap_percentile"
+  }
+}

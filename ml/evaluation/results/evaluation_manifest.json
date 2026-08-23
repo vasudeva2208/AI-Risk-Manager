@@ -1,0 +1,28 @@
+{
+  "manifest_version": "1.0.0",
+  "generated_at": "2026-08-23T16:10:00Z",
+  "dataset_version": "return-abuse-synthetic-v1",
+  "feature_version": "v2_point_in_time_23f",
+  "champion_model_version": "return-risk-hgb-v1",
+  "baseline_model_version": "return-risk-logreg-v1",
+  "operating_threshold": 0.3,
+  "sample_counts": {
+    "train": 3500,
+    "validation": 750,
+    "held_out_test": 750,
+    "total": 5000
+  },
+  "artifacts": {
+    "model_comparison": "model_comparison.json",
+    "model_selection_report": "model_selection_report.json",
+    "validation_vs_test": "validation_vs_test.json",
+    "cost_sensitivity": "cost_sensitivity.json",
+    "confidence_intervals": "confidence_intervals.json",
+    "dataset_quality": "dataset_quality.json",
+    "threshold_analysis": "threshold_analysis.json",
+    "confusion_matrix": "confusion_matrix.json",
+    "calibration_curve": "calibration.json",
+    "pr_curve": "pr_curve.json",
+    "roc_curve": "roc_curve.json"
+  }
+}

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface-50 text-surface-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-accent text-white font-medium rounded hover:bg-accent-hover transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-none;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-white text-surface-700 font-medium rounded border border-surface-300 hover:bg-surface-50 transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-none;
+  }
+  
+  .card-flat {
+    @apply bg-white border border-surface-200 rounded p-6 shadow-none;
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "dataset_version": "return-abuse-synthetic-v1",
+  "dataset_type": "SYNTHETIC_EVALUATION",
+  "row_count": 5000,
+  "positive_count": 673,
+  "negative_count": 4327,
+  "prevalence": 0.1346,
+  "train_count": 3500,
+  "train_positive_count": 449,
+  "train_prevalence": 0.1283,
+  "validation_count": 750,
+  "validation_positive_count": 90,
+  "validation_prevalence": 0.12,
+  "test_count": 750,
+  "test_positive_count": 134,
+  "test_prevalence": 0.1787,
+  "missing_values_count": 0,
+  "duplicate_return_ids": 0,
+  "duplicate_order_ids": 0,
+  "unique_customer_count": 1577,
+  "temporal_separation_verified": true,
+  "target_leakage_check": "PASSED (0 target variables in feature matrix)",
+  "feature_count": 23,
+  "random_seed": 42,
+  "base_start_date": "2025-01-01",
+  "feature_statistics": {
+    "customer_account_age_days": {
+      "min": 1.0,
+      "median": 488.0,
+      "mean": 521.6358,
+      "max": 1199.0,
+      "target_correlation": -0.4116
+    },
+    "customer_order_count_lifetime": {
+      "min": 1.0,
+      "median": 13.0,
+      "mean": 14.5974,
+      "max": 47.0,
+      "target_correlation": -0.3775
+    },
+    "customer_return_count_lifetime": {
+      "min": 0.0,
+      "median": 1.0,
+      "mean": 2.9954,
+      "max": 21.0,
+      "target_correlation": -0.007
+    },
+    "historical_return_rate": {
+      "min": 0.0,
+      "median": 0.125,
+      "mean": 0.2194,
+      "max": 1.0,
+      "target_correlation": 0.5932
+    },
+    "customer_dispute_count": {
+      "min": 0.0,
+      "median": 0.0,
+      "mean": 0.1262,
+      "max": 5.0,
+      "target_correlation": 0.492
+    },
+    "orders_last_7d": {
+      "min": 0.0,
+      "median": 1.0,
+      "mean": 0.8888,
+      "max": 7.0,
+      "target_correlation": 0.1476
+    },
+    "orders_last_30d": {
+      "min": 0.0,
+      "median": 2.0,
+      "mean": 2.3852,
+      "max": 14.0,
+      "target_correlation": 0.1258
+    },
+    "orders_last_90d": {
+      "min": 0.0,
+      "median": 5.0,
+      "mean": 6.165,
+      "max": 26.0,
+      "target_correlation": -0.0636
+    },
+    "returns_last_7d": {
+      "min": 0.0,
+      "median": 0.0,
+      "mean": 0.4074,
+      "max": 6.0,
+      "target_correlation": 0.4303
+    },
+    "returns_last_30d": {
+      "min": 0.0,
+      "median": 0.0,
+      "mean": 0.7142,
+      "max": 8.0,
+      "target_correlation": 0.4226
+    },
+    "returns_last_90d": {
+      "min": 0.0,
+      "median": 1.0,
+      "mean": 1.597,
+      "max": 14.0,
+      "target_correlation": 0.2619
+    },
+    "customer_return_velocity": {
+      "min": 0.0,
+      "median": 0.0,
+      "mean": 0.2069,
+      "max": 1.0,
+      "target_correlation": 0.5109
+    },
+    "refund_to_spend_ratio": {
+      "min": 0.0,
+      "median": 0.11249999999999999,
+      "mean": 0.1975,
+      "max": 0.9000402252614642,
+      "target_correlation": 0.5932
+    },
+    "order_amount": {
+      "min": 20.08,
+      "median": 116.61,
+      "mean": 234.5956,
+      "max": 2637.91,
+      "target_correlation": 0.4366
+    },
+    "order_item_count": {
+      "min": 1.0,
+      "median": 1.0,
+      "mean": 1.606,
+      "max": 4.0,
+      "target_correlation": -0.1689
+    },
+    "order_discount_ratio": {
+      "min": 0.0,
+      "median": 0.06078657905123253,
+      "mean": 0.0921,
+      "max": 0.5539552404165744,
+      "target_correlation": -0.2599
+    },
+    "order_vs_avg_spend_ratio": {
+      "min": 0.7704368117844382,
+      "median": 1.044802764363796,
+      "mean": 1.1294,
+      "max": 2.000304506699147,
+      "target_correlation": 0.6746
+    },
+    "days_since_delivery": {
+      "min": 0.0,
+      "median": 4.0,
+      "mean": 7.4884,
+      "max": 30.0,
+      "target_correlation": 0.3835
+    },
+    "refund_requested_ratio": {
+      "min": 0.3298186419232391,
+      "median": 0.5,
+      "mean": 0.6148,
+      "max": 1.0,
+      "target_correlation": -0.005
+    }
+  }
+}

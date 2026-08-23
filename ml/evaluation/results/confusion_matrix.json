@@ -1,0 +1,14 @@
+{
+  "logreg": {
+    "true_negatives": 579,
+    "false_positives": 37,
+    "false_negatives": 18,
+    "true_positives": 116
+  },
+  "hgb": {
+    "true_negatives": 578,
+    "false_positives": 38,
+    "false_negatives": 20,
+    "true_positives": 114
+  }
+}

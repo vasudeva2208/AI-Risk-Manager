@@ -1,0 +1,82 @@
+{
+  "logreg": [
+    {
+      "predicted_prob": 0.0364,
+      "empirical_fraction": 0.0243
+    },
+    {
+      "predicted_prob": 0.1241,
+      "empirical_fraction": 0.0
+    },
+    {
+      "predicted_prob": 0.236,
+      "empirical_fraction": 0.5714
+    },
+    {
+      "predicted_prob": 0.3538,
+      "empirical_fraction": 0.7143
+    },
+    {
+      "predicted_prob": 0.4483,
+      "empirical_fraction": 0.697
+    },
+    {
+      "predicted_prob": 0.5554,
+      "empirical_fraction": 0.64
+    },
+    {
+      "predicted_prob": 0.6444,
+      "empirical_fraction": 0.7917
+    },
+    {
+      "predicted_prob": 0.746,
+      "empirical_fraction": 0.7222
+    },
+    {
+      "predicted_prob": 0.8422,
+      "empirical_fraction": 0.9524
+    },
+    {
+      "predicted_prob": 0.9183,
+      "empirical_fraction": 0.9091
+    }
+  ],
+  "hgb": [
+    {
+      "predicted_prob": 0.0369,
+      "empirical_fraction": 0.023
+    },
+    {
+      "predicted_prob": 0.1254,
+      "empirical_fraction": 0.0417
+    },
+    {
+      "predicted_prob": 0.254,
+      "empirical_fraction": 0.75
+    },
+    {
+      "predicted_prob": 0.3542,
+      "empirical_fraction": 0.5833
+    },
+    {
+      "predicted_prob": 0.4523,
+      "empirical_fraction": 0.6842
+    },
+    {
+      "predicted_prob": 0.5514,
+      "empirical_fraction": 0.6757
+    },
+    {
+      "predicted_prob": 0.6486,
+      "empirical_fraction": 0.9167
+    },
+    {
+      "predicted_prob": 0.7533,
+      "empirical_fraction": 0.9565
+    },
+    {
+      "predicted_prob": 0.8242,
+      "empirical_fraction": 0.8333
+    }
+  ]
+}

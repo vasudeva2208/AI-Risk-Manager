@@ -1,0 +1,128 @@
+{
+  "disclaimer": "SYNTHETIC SIMULATION \u2014 NOT PRODUCTION SAVINGS",
+  "split_summary": {
+    "train": {
+      "count": 3500,
+      "target_count": 449,
+      "prevalence": 0.12828571428571428
+    },
+    "val": {
+      "count": 750,
+      "target_count": 90,
+      "prevalence": 0.12
+    },
+    "held_out_test": {
+      "count": 750,
+      "target_count": 134,
+      "prevalence": 0.17866666666666667
+    }
+  },
+  "models": {
+    "baseline_logistic_regression": {
+      "version": "return-risk-logreg-v1",
+      "optimal_threshold": 0.3,
+      "metrics_at_opt_threshold": {
+        "operating_threshold": 0.3,
+        "sample_count": 750,
+        "positive_count": 134,
+        "prevalence": 0.17866666666666667,
+        "precision": 0.7582,
+        "recall": 0.8657,
+        "f1_score": 0.8084,
+        "roc_auc": 0.9245,
+        "pr_auc": 0.789,
+        "brier_score": 0.0644,
+        "false_positive_rate": 0.0601,
+        "false_negative_rate": 0.1343,
+        "confusion_matrix": {
+          "true_negatives": 579,
+          "false_positives": 37,
+          "false_negatives": 18,
+          "true_positives": 116
+        }
+      },
+      "costs_at_opt_threshold": {
+        "disclaimer": "SYNTHETIC SIMULATION \u2014 NOT PRODUCTION SAVINGS",
+        "operating_threshold": 0.3,
+        "currency_symbol": "\u20b9",
+        "tp_count": 116,
+        "fp_count": 37,
+        "fn_count": 18,
+        "tn_count": 579,
+        "review_count": 153,
+        "usd": {
+          "baseline_unmitigated_loss": 77659.82,
+          "gross_loss_prevented": 72718.23,
+          "false_positive_friction_cost": 1850.0,
+          "false_negative_realized_loss": 3955.59,
+          "review_labor_expenditure": 1740.0,
+          "total_estimated_cost": 7545.59,
+          "net_merchant_benefit": 70114.23
+        },
+        "inr": {
+          "baseline_unmitigated_loss": 6445765.06,
+          "gross_loss_prevented": 6035613.09,
+          "false_positive_friction_cost": 153550.0,
+          "false_negative_realized_loss": 328313.97,
+          "review_labor_expenditure": 144420.0,
+          "total_estimated_cost": 626283.97,
+          "net_merchant_benefit": 5819481.09
+        }
+      }
+    },
+    "candidate_hist_gradient_boosting": {
+      "version": "return-risk-hgb-v1",
+      "optimal_threshold": 0.3,
+      "metrics_at_opt_threshold": {
+        "operating_threshold": 0.3,
+        "sample_count": 750,
+        "positive_count": 134,
+        "prevalence": 0.17866666666666667,
+        "precision": 0.75,
+        "recall": 0.8507,
+        "f1_score": 0.7972,
+        "roc_auc": 0.9242,
+        "pr_auc": 0.7983,
+        "brier_score": 0.0671,
+        "false_positive_rate": 0.0617,
+        "false_negative_rate": 0.1493,
+        "confusion_matrix": {
+          "true_negatives": 578,
+          "false_positives": 38,
+          "false_negatives": 20,
+          "true_positives": 114
+        }
+      },
+      "costs_at_opt_threshold": {
+        "disclaimer": "SYNTHETIC SIMULATION \u2014 NOT PRODUCTION SAVINGS",
+        "operating_threshold": 0.3,
+        "currency_symbol": "\u20b9",
+        "tp_count": 114,
+        "fp_count": 38,
+        "fn_count": 20,
+        "tn_count": 578,
+        "review_count": 152,
+        "usd": {
+          "baseline_unmitigated_loss": 77659.82,
+          "gross_loss_prevented": 72369.28,
+          "false_positive_friction_cost": 1900.0,
+          "false_negative_realized_loss": 4321.54,
+          "review_labor_expenditure": 1710.0,
+          "total_estimated_cost": 7931.54,
+          "net_merchant_benefit": 69728.28
+        },
+        "inr": {
+          "baseline_unmitigated_loss": 6445765.06,
+          "gross_loss_prevented": 6006650.24,
+          "false_positive_friction_cost": 157700.0,
+          "false_negative_realized_loss": 358687.82,
+          "review_labor_expenditure": 141930.0,
+          "total_estimated_cost": 658317.82,
+          "net_merchant_benefit": 5787447.24
+        }
+      }
+    }
+  },
+  "selected_model": "return-risk-hgb-v1",
+  "selection_rationale": "Selected Champion: return-risk-hgb-v1. It provides the highest PR-AUC (0.7983 vs 0.7890 for Logistic Regression), indicating stronger ranking performance under class imbalance. Model selection and threshold selection were performed using validation data; the held-out test set was used only for post-selection generalization assessment. Logistic Regression remains preserved as the baseline for auditability."
+}

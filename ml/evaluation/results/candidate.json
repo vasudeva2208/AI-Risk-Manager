@@ -1,0 +1,86 @@
+{
+  "metrics_default": {
+    "operating_threshold": 0.5,
+    "sample_count": 750,
+    "positive_count": 134,
+    "prevalence": 0.17866666666666667,
+    "precision": 0.8222,
+    "recall": 0.5522,
+    "f1_score": 0.6607,
+    "roc_auc": 0.9242,
+    "pr_auc": 0.7983,
+    "brier_score": 0.0671,
+    "false_positive_rate": 0.026,
+    "false_negative_rate": 0.4478,
+    "confusion_matrix": {
+      "true_negatives": 600,
+      "false_positives": 16,
+      "false_negatives": 60,
+      "true_positives": 74
+    }
+  },
+  "metrics_optimal": {
+    "operating_threshold": 0.3,
+    "sample_count": 750,
+    "positive_count": 134,
+    "prevalence": 0.17866666666666667,
+    "precision": 0.75,
+    "recall": 0.8507,
+    "f1_score": 0.7972,
+    "roc_auc": 0.9242,
+    "pr_auc": 0.7983,
+    "brier_score": 0.0671,
+    "false_positive_rate": 0.0617,
+    "false_negative_rate": 0.1493,
+    "confusion_matrix": {
+      "true_negatives": 578,
+      "false_positives": 38,
+      "false_negatives": 20,
+      "true_positives": 114
+    }
+  },
+  "costs": {
+    "disclaimer": "SYNTHETIC SIMULATION \u2014 NOT PRODUCTION SAVINGS",
+    "operating_threshold": 0.3,
+    "currency_symbol": "\u20b9",
+    "tp_count": 114,
+    "fp_count": 38,
+    "fn_count": 20,
+    "tn_count": 578,
+    "review_count": 152,
+    "usd": {
+      "baseline_unmitigated_loss": 77659.82,
+      "gross_loss_prevented": 72369.28,
+      "false_positive_friction_cost": 1900.0,
+      "false_negative_realized_loss": 4321.54,
+      "review_labor_expenditure": 1710.0,
+      "total_estimated_cost": 7931.54,
+      "net_merchant_benefit": 69728.28
+    },
+    "inr": {
+      "baseline_unmitigated_loss": 6445765.06,
+      "gross_loss_prevented": 6006650.24,
+      "false_positive_friction_cost": 157700.0,
+      "false_negative_realized_loss": 358687.82,
+      "review_labor_expenditure": 141930.0,
+      "total_estimated_cost": 658317.82,
+      "net_merchant_benefit": 5787447.24
+    }
+  },
+  "metadata": {
+    "model_version": "return-risk-hgb-v1",
+    "algorithm": "HistGradientBoostingClassifier",
+    "hyperparameters": {
+      "max_iter": 150,
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20
+    },
+    "calibration_method": "sigmoid (Platt scaling)",
+    "trained_at": "2026-08-23T10:17:31.766601",
+    "sample_count": 3500,
+    "target_prevalence": 0.12828571428571428,
+    "num_features_in": 23,
+    "num_features_out": 37
+  }
+}
