@@ -1,5 +1,6 @@
+from typing import Union, List
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import Field
+from pydantic import Field, field_validator
 
 
 class Settings(BaseSettings):
@@ -14,7 +15,29 @@ class Settings(BaseSettings):
 
     # ML Config
     MODEL_DIR: str = "ml/models/artifacts"
-    ACTIVE_MODEL_VERSION: str = "v1_baseline_logistic_regression"
+    ACTIVE_MODEL_VERSION: str = "return-risk-hgb-v1"
+
+    # CORS Origins (comma-separated string or list)
+    CORS_ORIGINS: Union[List[str], str] = Field(
+        default=["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:5173", "http://127.0.0.1:5173"],
+        description="Allowed CORS origins for the frontend application"
+    )
+
+    @field_validator("CORS_ORIGINS", mode="before")
+    @classmethod
+    def parse_cors_origins(cls, v: Union[str, List[str]]) -> List[str]:
+        if isinstance(v, str):
+            origins = [origin.strip() for origin in v.split(",") if origin.strip()]
+            return origins if origins else ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:5173", "http://127.0.0.1:5173"]
+        elif isinstance(v, list):
+            return [str(origin).strip() for origin in v if str(origin).strip()]
+        return ["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:5173", "http://127.0.0.1:5173"]
+
+    def get_cors_origins(self) -> List[str]:
+        origins = self.CORS_ORIGINS if isinstance(self.CORS_ORIGINS, list) else [self.CORS_ORIGINS]
+        if self.APP_ENV.lower() == "production" and ("*" in origins or any(o == "*" for o in origins)):
+            raise ValueError("Unsafe CORS configuration: Wildcard '*' is strictly prohibited in production environment.")
+        return origins
 
     # Bounded Policy Thresholds
     POLICY_THRESHOLD_LOW: float = Field(default=0.30, description="Upper bound for low risk APPROVE policy recommendation")

@@ -8,7 +8,9 @@ import {
   ModelComparisonData,
 } from '../types/api';
 
-const API_BASE = '/api/v1';
+const RAW_BASE = (import.meta.env?.VITE_API_BASE_URL as string) || 'http://127.0.0.1:8000';
+const API_HOST = RAW_BASE.replace(/\/+$/, '');
+const API_BASE = `${API_HOST}/api/v1`;
 
 export const apiClient = {
   // Risk Assessments
@@ -79,7 +81,7 @@ export const apiClient = {
     return res.json();
   },
 
-  // Evaluation Artifacts
+  // Evaluation Artifacts (Static assets served by frontend)
   async getModelComparison(): Promise<ModelComparisonData> {
     const res = await fetch('/evaluation_artifacts/model_comparison.json');
     if (!res.ok) throw new Error(`Failed to load model comparison artifact.`);
